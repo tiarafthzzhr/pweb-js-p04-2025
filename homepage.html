@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Recipe Dashboard</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2 class="logo">My Recipe App</h2>
+        <div class="user-info">
+            <span id="welcome-message"></span> 
+            <button id="logout-btn">LOGOUT</button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="main-nav">
+            <a href="recipes.html">1. Recipes Collection</a>
+            <a href="#latest-recooked">2. Resep Yang Sudah Direcook</a> 
+        </nav>
+
+        <h1>Dashboard</h1>
+
+        <div id="stats-summary">
+            <p>Loading stats...</p>
+        </div>
+
+        <section id="recipe-spotlight">
+            <h2>🔥 Today's Featured Recipe</h2>
+            <div id="featured-card">Loading...</div>
+        </section>
+
+        <section id="latest-recooked">
+            <h2>📅 Recently Re-Cooked</h2>
+            <div id="recooked-list"><p>Loading...</p></div>
+        </section>
+    </main>
+
+    <script src="js/home.js"></script>
+</body>
+</html>
