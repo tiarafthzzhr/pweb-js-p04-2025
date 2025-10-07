@@ -1,0 +1,136 @@
+/* css/login.css - untuk index.html
+   Simpan: css/login.css
+*/
+
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --accent:#ff6b6b;
+  --primary:#2b6cb0;
+  --muted:#777;
+  --success:#27ae60;
+  --danger:#e74c3c;
+  --glass: rgba(255,255,255,0.65);
+  --shadow: 0 6px 18px rgba(19, 35, 47, 0.08);
+  --radius:10px;
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+}
+
+* { box-sizing: border-box; }
+
+html,body{
+  height:100%;
+  margin:0;
+  background: linear-gradient(180deg,#f0f4f9 0%, var(--bg) 100%);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* center container */
+.login-container{
+  max-width:420px;
+  margin:6vh auto;
+  padding:28px;
+  background:var(--card);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  border:1px solid rgba(20,30,40,0.03);
+}
+
+.login-container h1{
+  margin:0 0 8px;
+  font-size:1.6rem;
+  letter-spacing:0.2px;
+}
+
+.login-container p{
+  font-size:0.9rem;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+/* form */
+#login-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:6px;
+  text-align:left;
+}
+
+#login-form label{
+  display:block;
+  font-size:0.85rem;
+  margin-bottom:6px;
+  color:#333;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"]{
+  width:100%;
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid rgba(14,20,30,0.08);
+  background:linear-gradient(180deg, #fff, #fbfdff);
+  font-size:0.95rem;
+  outline:none;
+  transition:box-shadow .18s, border-color .12s;
+}
+
+#login-form input:focus{
+  border-color:var(--primary);
+  box-shadow:0 6px 18px rgba(43,108,176,0.08);
+}
+
+/* button */
+#login-button{
+  margin-top:6px;
+  background:var(--primary);
+  color:white;
+  padding:12px 16px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  font-size:1rem;
+  transition:transform .08s ease, box-shadow .12s;
+  box-shadow: 0 6px 14px rgba(43,108,176,0.12);
+}
+
+#login-button:active{ transform:translateY(1px); }
+#login-button[disabled]{
+  opacity:0.6;
+  cursor:not-allowed;
+  transform:none;
+  box-shadow:none;
+}
+
+/* message status (loading / error / success) */
+#message-status{
+  margin:8px 0 0;
+  min-height:1.1em;
+  font-size:0.95rem;
+  text-align:center;
+}
+
+.status-loading{ color: var(--primary); }
+.status-success{ color: var(--success); font-weight:600; }
+.status-error{ color: var(--danger); font-weight:600; }
+
+/* small note style */
+.login-container .note{
+  margin-top:12px;
+  font-size:0.82rem;
+  color:var(--muted);
+}
+
+/* responsive */
+@media (max-width:480px){
+  .login-container{
+    margin:4vh 12px;
+    padding:18px;
+  }
+  #login-button{ font-size:0.95rem; padding:10px; }
+}
