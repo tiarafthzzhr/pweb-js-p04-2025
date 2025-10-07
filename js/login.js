@@ -12,28 +12,37 @@ document.addEventListener("DOMContentLoaded", () => {
         message.style.color = "black";
 
         try {
-            const response = await fetch("https://dummyjson.com/users");
-            if (!response.ok) throw new Error("Failed to fetch users");
+            const usersRes = await fetch("https://dummyjson.com/users");
+            if (!usersRes.ok) throw new Error("Failed to fetch users");
 
-            const data = await response.json();
-            const user = data.users.find(u => u.username === username);
+            const usersData = await usersRes.json();
+            const userExists = usersData.users.find(u => u.username === username);
 
-            if (!user) {
+            if (!userExists) {
                 message.textContent = "❌ Username not found!";
                 message.style.color = "red";
                 return;
             }
 
-            if (password === "") {
-                message.textContent = "⚠️ Password cannot be empty!";
-                message.style.color = "orange";
+            const loginResponse = await fetch("https://dummyjson.com/auth/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (!loginResponse.ok) {
+                message.textContent = "❌ Incorrect password!";
+                message.style.color = "red";
                 return;
             }
 
+            const loggedUser = await loginResponse.json();
+
             localStorage.setItem("loggedUser", JSON.stringify({
-                id: user.id,
-                firstName: user.firstName,
-                username: user.username
+                id: loggedUser.id,
+                firstName: loggedUser.firstName,
+                username: loggedUser.username,
+                token: loggedUser.token
             }));
 
             message.textContent = "✅ Login successful! Redirecting...";
@@ -42,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 window.location.href = "homepage.html";
             }, 1000);
+
         } catch (error) {
             message.textContent = "❌ Error: " + error.message;
             message.style.color = "red";
