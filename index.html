@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="css/login.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <!-- Hubungkan file CSS -->
+  <link rel="stylesheet" href="css/login.css" />
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login Page</h1>
-        <p>Notes: use credentials from DummyJSON (e.g., **emilys** / **emilyspass**)</p>
-        <form id="login-form">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
+  <!-- isi form login kamu -->
+  <div class="login-container">
+    <h1>Login</h1>
+    <p>Silakan masukkan username & password</p>
+    <form id="login-form">
+      <label for="username">Username</label>
+      <input type="text" id="username" required />
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" required />
 
-            <button type="submit" id="login-button">SIGN IN</button>
-            
-            <p id="message-status"></p>
-        </form>
-    </div>
-
-    <script src="js/login.js"></script>
+      <button id="login-button" type="submit">Login</button>
+      <div id="message-status"></div>
+    </form>
+  </div>
 </body>
 </html>
