@@ -10,7 +10,6 @@
     <header class="navbar">
         <h2 class="logo">My Recipe App</h2>
         <div class="user-info">
-            <img id="user-avatar" src="https://via.placeholder.com/40" alt="User Avatar" style="width:40px;height:40px;border-radius:50%;display:none;">
             <span id="welcome-message"></span> 
             <button id="logout-btn">LOGOUT</button>
         </div>
@@ -39,30 +38,7 @@
         </section>
     </main>
 
-    <script>
-        // Ambil data user dari localStorage
-        const userData = JSON.parse(localStorage.getItem("user"));
-
-        const welcomeMessage = document.getElementById("welcome-message");
-        const userAvatar = document.getElementById("user-avatar");
-        const logoutBtn = document.getElementById("logout-btn");
-
-        if (userData) {
-            welcomeMessage.textContent = `Welcome, ${userData.firstName} ${userData.lastName}`;
-            if (userData.image) {
-                userAvatar.src = userData.image;
-                userAvatar.style.display = "inline-block";
-            }
-        } else {
-            // kalau tidak ada userData, kembali ke login
-            window.location.href = "index.html";
-        }
-
-        // Logout
-        logoutBtn.addEventListener("click", () => {
-            localStorage.removeItem("user");
-            window.location.href = "index.html";
-        });
-    </script>
+    <script src="js/home.js"></script>
 </body>
-</html>
+</html> 
+
