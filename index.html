@@ -4,42 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
+  <!-- Hubungkan file CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Gambar motif makanan jadi background -->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Culinary_fruits_background.svg"
-       alt="food background" class="food-bg" />
+  <div class="login-container">
+    <h1>Login</h1>
+    <p>Silakan masukkan username & password</p>
 
-  <!-- Overlay lembut -->
-  <div class="bg-overlay"></div>
-
-  <div class="page">
-    <div class="login-container">
-      <div class="login-head">
-        <h1>Login</h1>
-        <p>Silakan masukkan username & password</p>
+    <form id="login-form">
+      <!-- Username -->
+      <div class="form-group">
+        <input type="text" id="username" placeholder=" " required />
+        <label for="username">Username</label>
       </div>
 
-      <form id="login-form">
-        <!-- Username -->
-        <div class="form-group">
-          <input type="text" id="username" placeholder=" " required />
-          <label for="username">Username</label>
-        </div>
+      <!-- Password -->
+      <div class="form-group">
+        <input type="password" id="password" placeholder=" " required />
+        <label for="password">Password</label>
+      </div>
 
-        <!-- Password -->
-        <div class="form-group">
-          <input type="password" id="password" placeholder=" " required />
-          <label for="password">Password</label>
-        </div>
-
-        <button id="login-button" type="submit">Login</button>
-        <div id="message-status"></div>
-      </form>
-    </div>
+      <!-- Tombol login -->
+      <button id="login-button" type="submit">Login</button>
+      <div id="message-status"></div>
+    </form>
   </div>
 
+  <!-- Hubungkan file JavaScript -->
   <script src="js/login.js"></script>
 </body>
 </html>
