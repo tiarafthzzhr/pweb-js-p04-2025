@@ -102,12 +102,8 @@ input:focus, select:focus {
 .login-container h1 {
   margin-bottom: 15px;
   background: linear-gradient(90deg, #ff512f, #dd2476);
-
-  /* Standar + prefiks */
   background-clip: text;
   -webkit-background-clip: text;
-
-  /* Gradient text */
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
@@ -213,42 +209,16 @@ input:focus, select:focus {
   animation: fadeIn 0.5s ease;
 }
 
-/* ====== DARK MODE ====== */
+/* ====== DARK MODE (still with gradients) ====== */
 body.dark {
   background: linear-gradient(135deg, #1e272e, #2f3640);
   color: #f5f6fa;
 }
 
-/* Navbar */
 body.dark .navbar {
   background: linear-gradient(90deg, #4b6cb7, #182848);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-body.dark .logo {
-  color: #f5f6fa;
-}
-
-/* User Info */
-body.dark .user-info button {
-  background: linear-gradient(90deg, #ff512f, #dd2476);
-}
-body.dark .user-info button:hover {
-  box-shadow: 0 4px 12px rgba(255,255,255,0.2);
-}
-
-/* Cards */
-body.dark #stats-summary,
-body.dark #featured-card,
-body.dark #recooked-list,
-body.dark .recipe-card,
-body.dark .login-container {
-  background: #2f3640;
-  color: #f5f6fa;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-}
-
-/* Links / Nav */
 body.dark .main-nav a {
   background: linear-gradient(90deg, #9b59b6, #8e44ad);
 }
@@ -256,7 +226,6 @@ body.dark .main-nav a:hover {
   background: linear-gradient(90deg, #8e44ad, #9b59b6);
 }
 
-/* Buttons */
 body.dark .recipe-card button {
   background: linear-gradient(90deg, #16a085, #27ae60);
 }
@@ -264,7 +233,11 @@ body.dark .recipe-card button:hover {
   background: linear-gradient(90deg, #27ae60, #16a085);
 }
 
-/* Modal */
+body.dark #stats-summary,
+body.dark #featured-card,
+body.dark #recooked-list,
+body.dark .recipe-card,
+body.dark .login-container,
 body.dark .modal-content {
   background: #2f3640;
   color: #f5f6fa;
