@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Recipes - My Recipe App</title>
+  <title>Recipes - Recipe Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,25 +17,31 @@
   </header>
 
   <main>
-    <nav class="main-nav">
-      <a href="homepage.html">🏠 Dashboard</a>
-      <a href="recipes.html">📖 Recipes Collection</a>
-    </nav>
-
     <h1>Recipes Collection</h1>
 
+    <!-- Filter/Search -->
     <div class="controls-container">
-      <label for="category">Filter by Category:</label>
-      <select id="category">
-        <option value="all">All</option>
+      <input type="text" id="search-bar" placeholder="Search recipes..." />
+      <select id="category-filter">
+        <option value="">All Categories</option>
         <option value="breakfast">Breakfast</option>
         <option value="lunch">Lunch</option>
         <option value="dinner">Dinner</option>
       </select>
     </div>
 
+    <!-- Grid Recipe Cards -->
     <div class="recipe-grid" id="recipe-list">
       <p>Loading recipes...</p>
+    </div>
+
+    <!-- Modal for recipe detail -->
+    <div class="modal-backdrop" id="modal" style="display:none;">
+      <div class="modal-content">
+        <h2 id="modal-title">Title</h2>
+        <p id="modal-description">Description...</p>
+        <button onclick="closeModal()">Close</button>
+      </div>
     </div>
   </main>
 
@@ -63,6 +69,11 @@
       localStorage.removeItem("user");
       window.location.href = "index.html";
     });
+
+    // Modal functions
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
   </script>
 
   <script src="js/recipes.js"></script>
