@@ -75,17 +75,16 @@ button {
 }
 
 input, select {
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   outline: none;
-  font-size: 1em;
-  transition: border 0.2s ease, box-shadow 0.3s ease;
+  transition: border 0.2s ease;
 }
 
 input:focus, select:focus {
-  border-color: #6a11cb;
-  box-shadow: 0 0 6px rgba(106,17,203,0.4);
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26,188,156,0.3);
 }
 
 /* ====== LOGIN PAGE ====== */
@@ -101,50 +100,12 @@ input:focus, select:focus {
 }
 
 .login-container h1 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   background: linear-gradient(90deg, #ff512f, #dd2476);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-}
-
-/* Floating Label Form */
-.form-group {
-  position: relative;
-  margin: 25px 0;
-  text-align: left;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 14px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  font-size: 1em;
-  background: #f9f9f9;
-}
-
-.form-group label {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: white;
-  padding: 0 6px;
-  color: #888;
-  font-size: 0.9em;
-  pointer-events: none;
-  transition: 0.3s ease;
-}
-
-.form-group input:focus + label,
-.form-group input:not(:placeholder-shown) + label {
-  top: -8px;
-  left: 10px;
-  font-size: 0.75em;
-  color: #6a11cb;
 }
 
 #login-button {
