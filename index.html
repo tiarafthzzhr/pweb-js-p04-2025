@@ -3,35 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login</title>
-  <!-- Hubungkan file CSS -->
+  <title>Login Page</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="login-container">
-    <h1>Login</h1>
-    <p>Silakan masukkan username & password</p>
-
+    <h1>Login Page</h1>
     <form id="login-form">
-      <!-- Username -->
       <div class="form-group">
-        <input type="text" id="username" placeholder=" " required />
         <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Masukkan username" required />
       </div>
-
-      <!-- Password -->
       <div class="form-group">
-        <input type="password" id="password" placeholder=" " required />
         <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Masukkan password" required />
       </div>
-
-      <!-- Tombol login -->
       <button id="login-button" type="submit">Login</button>
       <div id="message-status"></div>
     </form>
   </div>
-
-  <!-- Hubungkan file JavaScript -->
-  <script src="js/login.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>
