@@ -2,16 +2,15 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
-  color: #2d3436;
+  background: linear-gradient(135deg, #f9f9f9, #eaf4fc);
+  color: #2c3e50;
   line-height: 1.6;
-  transition: background 0.4s ease, color 0.4s ease;
 }
 
 h1, h2, h3 {
   margin: 0.5em 0;
   font-weight: 600;
-  color: #2d3436;
+  color: #2c3e50;
 }
 
 a {
@@ -25,10 +24,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  background: linear-gradient(90deg, #16a085, #1abc9c);
   padding: 15px 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: background 0.4s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .logo {
@@ -45,23 +43,21 @@ a {
 
 .user-info img {
   border: 2px solid white;
-  border-radius: 50%;
 }
 
 .user-info button {
-  background: linear-gradient(90deg, #ff512f, #dd2476);
+  background: #e74c3c;
   border: none;
   padding: 8px 16px;
   color: white;
   cursor: pointer;
   border-radius: 20px;
   font-weight: 500;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .user-info button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background: #c0392b;
 }
 
 /* ====== BUTTONS & INPUTS ====== */
@@ -89,37 +85,32 @@ input:focus, select:focus {
 
 /* ====== LOGIN PAGE ====== */
 .login-container {
-  width: 380px;
+  width: 400px;
   margin: 100px auto;
   padding: 30px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   text-align: center;
   animation: fadeIn 0.6s ease;
 }
 
 .login-container h1 {
-  margin-bottom: 15px;
-  background: linear-gradient(90deg, #ff512f, #dd2476);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  color: #16a085;
 }
 
 #login-button {
   width: 100%;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  background: linear-gradient(90deg, #16a085, #1abc9c);
   color: white;
   padding: 12px;
   font-size: 1.1em;
   margin-top: 10px;
-  border-radius: 25px;
 }
 
 #login-button:hover {
-  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  background: linear-gradient(90deg, #1abc9c, #16a085);
 }
 
 #message-status {
@@ -137,28 +128,34 @@ input:focus, select:focus {
 
 .main-nav a {
   padding: 12px 20px;
-  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  background: linear-gradient(90deg, #3498db, #2980b9);
   color: white;
   border-radius: 30px;
   font-weight: 500;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
 .main-nav a:hover {
-  background: linear-gradient(90deg, #ff5e62, #ff9966);
-  transform: translateY(-3px);
+  background: linear-gradient(90deg, #2980b9, #3498db);
+  transform: translateY(-2px);
 }
 
 #stats-summary, #featured-card, #recooked-list {
   background: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin: 20px 0;
   animation: fadeInUp 0.5s ease;
 }
 
 /* ====== RECIPES PAGE ====== */
+.controls-container {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
 .recipe-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -169,7 +166,7 @@ input:focus, select:focus {
 .recipe-card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   padding: 15px;
   text-align: center;
   transition: transform 0.3s ease;
@@ -188,14 +185,14 @@ input:focus, select:focus {
 }
 
 .recipe-card button {
-  background: linear-gradient(90deg, #36d1dc, #5b86e5);
+  background: linear-gradient(90deg, #8e44ad, #9b59b6);
   color: white;
   padding: 10px 18px;
   border-radius: 20px;
 }
 
 .recipe-card button:hover {
-  background: linear-gradient(90deg, #5b86e5, #36d1dc);
+  background: linear-gradient(90deg, #9b59b6, #8e44ad);
 }
 
 /* ====== MODAL ====== */
@@ -205,42 +202,8 @@ input:focus, select:focus {
 
 .modal-content {
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   animation: fadeIn 0.5s ease;
-}
-
-/* ====== DARK MODE (still with gradients) ====== */
-body.dark {
-  background: linear-gradient(135deg, #1e272e, #2f3640);
-  color: #f5f6fa;
-}
-
-body.dark .navbar {
-  background: linear-gradient(90deg, #4b6cb7, #182848);
-}
-
-body.dark .main-nav a {
-  background: linear-gradient(90deg, #9b59b6, #8e44ad);
-}
-body.dark .main-nav a:hover {
-  background: linear-gradient(90deg, #8e44ad, #9b59b6);
-}
-
-body.dark .recipe-card button {
-  background: linear-gradient(90deg, #16a085, #27ae60);
-}
-body.dark .recipe-card button:hover {
-  background: linear-gradient(90deg, #27ae60, #16a085);
-}
-
-body.dark #stats-summary,
-body.dark #featured-card,
-body.dark #recooked-list,
-body.dark .recipe-card,
-body.dark .login-container,
-body.dark .modal-content {
-  background: #2f3640;
-  color: #f5f6fa;
 }
 
 /* ====== ANIMATIONS ====== */
