@@ -114,7 +114,7 @@ input, select {
 /* input box */
 .form-group input {
   width: 100%;
-  padding: 10px 12px;
+  padding: 10px 2px;
   border: 1px solid #d7ccc8;
   border-radius: 6px;
   font-size: 14px;
@@ -334,3 +334,4 @@ input, select {
   from { transform: translateY(40px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
