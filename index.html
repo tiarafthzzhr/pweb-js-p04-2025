@@ -8,17 +8,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- isi form login -->
   <div class="login-container">
     <h1>Login</h1>
     <p>Silakan masukkan username & password</p>
+
     <form id="login-form">
-      <label for="username">Username</label>
-      <input type="text" id="username" required />
+      <!-- Username -->
+      <div class="form-group">
+        <input type="text" id="username" placeholder=" " required />
+        <label for="username">Username</label>
+      </div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" required />
+      <!-- Password -->
+      <div class="form-group">
+        <input type="password" id="password" placeholder=" " required />
+        <label for="password">Password</label>
+      </div>
 
+      <!-- Tombol login -->
       <button id="login-button" type="submit">Login</button>
       <div id="message-status"></div>
     </form>
