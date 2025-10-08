@@ -292,3 +292,30 @@ body.dark .modal-content {
   from {opacity: 0; transform: translateY(30px);}
   to {opacity: 1; transform: translateY(0);}
 }
+
+/* ====== FOOD MOTIF BACKGROUND ====== */
+.food-bg {
+  background-image: url("https://img.freepik.com/premium-vector/seamless-pattern-fast-food-background_40564-494.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Overlay lembut agar form tetap terbaca */
+.food-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+/* Supaya form muncul di atas overlay */
+.login-container {
+  position: relative;
+  z-index: 2;
+}
