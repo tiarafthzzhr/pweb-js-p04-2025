@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             message.style.color = "green";
 
             setTimeout(() => {
-                window.location.href = "homepage.html";
+                window.location.href = "../homepage/homepage.html";
             }, 1000);
 
         } catch (error) {

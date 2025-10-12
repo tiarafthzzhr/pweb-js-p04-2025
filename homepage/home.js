@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const logoutBtn = document.getElementById("logout-btn");
 
     if (!userData) {
-        window.location.href = "index.html";
+        window.location.href = "../login/index.html";
         return;
     }
 
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     logoutBtn.addEventListener("click", () => {
         localStorage.removeItem("loggedUser");
-        window.location.href = "index.html";
+        window.location.href = "../login/index.html";
     });
 
     const statsContainer = document.getElementById("stats-summary");

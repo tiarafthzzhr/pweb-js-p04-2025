@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const countInfo = document.getElementById('count-info');
 
   if (!userData) {
-    window.location.href = 'index.html';
+    window.location.href = '../login/index.html';
     return;
   }
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   logoutBtn.addEventListener('click', function () {
     localStorage.removeItem('loggedUser');
-    window.location.href = 'index.html';
+    window.location.href = '../login/index.html';
   });
 
   let recipes = [];
